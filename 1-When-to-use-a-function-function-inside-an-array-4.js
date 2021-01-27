@@ -1,7 +1,7 @@
 function enenify_all(nums) {
     for (let i = 0; i < nums.length; i++) {
         const num = nums[i];
-        enenify(num);
+
         if (num % 2 == 0) {
             console.log(num, ': is even number');
         } else {
