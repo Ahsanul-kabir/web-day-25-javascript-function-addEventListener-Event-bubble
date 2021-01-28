@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Company</title>
+</head>
+
+<body>
+    <h1 onclick="alert('Hero Programmer')">Exploring Javascript</h1>
+
+    <button onclick="alert(90)">Click Me 1</button>
+
+    <!-- <h1 onclick="console.log('Hero Programmer')">Exploring Javascript</h1> this just for Janar jonno eta use na kora better-->
+
+    <h2 onclick="handleClick()">Exploring Javascript</h2>
+    <button onclick="handleClick()">Click Me 2</button>
+
+    <h3>Mouse Move</h3>
+    <!-- <button onmousemove="handleClick()">Click Me 3</button> -->
+    <button onmouseover="handleClick()">Click Me 3</button>
+
+    <script>
+        function handleClick() {
+            console.log('Someone Clicked Me');
+            //console.log(new Date());
+        }
+    </script>
+</body>
+
+</html>
