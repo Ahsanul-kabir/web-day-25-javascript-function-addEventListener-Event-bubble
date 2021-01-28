@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Company</title>
+</head>
+
+<body>
+    <h1 onclick="alert('Hero Programmer')">Exploring Javascript</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p>Alias, ullam minus? Nemo corrupti pariatur eveniet.</p>
+    <p>Alias, blanditiis delectus esse iste nesciunt quidem.</p>
+
+    <button>click me -1</button>
+    <button id="secound">click me -2</button>
+    <button>click me -3</button>
+    <button id="lastPerson">click me -4</button>
+
+    <script>
+        const secoundButton = document.getElementById('secound');
+
+        function handleClick() {
+            document.body.style.backgroundColor = 'lightgreen';
+        }
+
+        /*
+        // way -1
+        secoundButton.onclick = handleClick;
+        secoundButton.onclick = handleClick(); --> dile full page color kore dibe
+        */
+
+
+        /*
+        // way -2
+        secoundButton.onclick = function() {
+            console.log('Secound Person clicked');
+        } */
+
+
+        //way -3
+        secoundButton.addEventListener('click', handleClick);
+
+        // way - 4
+        // ei kahne function er nam likha lage nah == Anonimous Function
+        document.getElementById('lastPerson').addEventListener('click', function() {
+            document.body.style.color = 'tomato';
+        });
+    </script>
+</body>
+
+</html>
