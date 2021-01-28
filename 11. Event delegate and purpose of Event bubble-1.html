@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>My List</h1>
+        <ul id="myList">
+            <li id="first" class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Lorem, ipsum dolor.</li>
+        </ul>
+    </div>
+
+    <script>
+        items = document.getElementsByClassName('item'); // get all item
+
+        for (let i = 0; i < items.length; i++) {
+            const item = items[i];
+            //console.log(item);
+            item.addEventListener('click', function(event) {
+                // console.log(this);
+                // ei line diya jei Event e click korbo oi line tai output e asbe = jei event click sei ta ke dora jbe
+
+                // console.log(this, event.target);
+                // same Eelemnt kei show kortese as only "this" er moto ar ektu different hote pare seta amra pore jante parbo
+
+                // console.log(this, event.target.innerText); // jei event ke click kora hoise oi tar vitorer TEXT ke show korar nor jonno
+                // console.log(event.target.innerText); // show only TEXT
+
+                // console.log(event.target.parentNode); // show parent node
+                event.target.parentNode.removeChild(event.target); // jei item ke click korbo oi ta ke remove kore dibe
+            })
+        }
+    </script>
+</body>
+
+</html>
