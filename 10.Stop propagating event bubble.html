@@ -20,7 +20,7 @@
     </div>
     <!-- Event bubble work from LOWER to UPWARD -->
     <script>
-        document.getElementById('first').addEventListener('click', function() {
+        document.getElementById('first').addEventListener('click', function(event) {
             console.log('Fist item clicked');
             //event.stopPropagation();
             // --> up er gula ke bondo kore dibe = bubble up bondo korbe
@@ -29,12 +29,12 @@
             // --> up er gula tw bondo korbe korbe then specific Element er modde jdi ar o kisu thake bondo kore dibe
         })
 
-        document.getElementById('myList').addEventListener('click', function() {
+        document.getElementById('myList').addEventListener('click', function(event) {
             console.log('UL clicked');
             //event.stopPropagation();
         })
 
-        document.getElementById('container').addEventListener('click', function() {
+        document.getElementById('container').addEventListener('click', function(event) {
             console.log('Container clicked');
         })
     </script>
